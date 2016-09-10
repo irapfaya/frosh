@@ -1,3 +1,115 @@
 // Place all the styles related to the projects controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+ @import "bootstrap-sprockets";
+ @import "bootstrap/theme";
+ @import "bootstrap";
+ @import "font-awesome";
+ 
+
+
+
+header {
+
+    @extend .page-header;
+    position: relative;
+    padding-bottom: 0px;
+
+    &:first-child {
+    margin-top: 20px;
+  }
+}
+
+.padda{
+	padding-top: 20px;
+}
+
+ul.actions {
+	@extend .list-unstyled;
+	@extend .list-inline;
+
+}
+
+a.new, a.edit, a.delete {
+     
+    @extend .btn;
+
+	&:before{
+
+	  font-family: "FontAwesome";
+	  padding-right: 0.5em;
+	}
+}
+
+a.new {
+	
+	
+	@extend .btn-success;
+
+  &:before {
+	
+	@extend .fa-plus;
+	
+	}
+}
+
+a.edit {
+	
+	@extend .btn-primary;
+
+  &:before {
+
+	@extend .fa-pencil;
+
+	}
+}
+
+a.delete {
+	
+	@extend .btn-danger;
+
+  &:before {
+
+	@extend .fa-trash;
+
+	}
+}
+
+
+
+ .alert-notice {
+    @extend .alert-success;
+}
+.alert-alert {
+     @extend .alert-danger;
+}
+
+form {
+   max-width: 500px;
+}
+
+body {
+    padding-top: 40px;
+}
+
+@media(min-width: $screen-sm-min) {
+
+  header {
+    h1, h2, h3, h4, h5, h6 {
+       max-width: 55%;
+    }
+  }
+
+
+  ul.actions {
+     
+     position: absolute;
+	 right: 2px;
+	 max-width: 45%;
+	 text-align: right;
+
+
+  }
+
+
+}
