@@ -38,7 +38,7 @@ class ProjectsController < ApplicationController
 
   def update
     #@project = Project.find(params[:id])
-    @project.update(project_params)
+    if @project.update(project_params)
 
     flash[:notice] = "Project has been updated"
     redirect_to @project
@@ -53,16 +53,21 @@ class ProjectsController < ApplicationController
   private
 
   def project_params
+
     params.require(:project).permit(:name, :description)
 
   end
 
   def set_project
+
      @project = Project.find(params[:id])
      rescue ActiveRecord::RecordNotFound
      flash[:alert] = "The project you were looking for could not be found."
      redirect_to projects_path
+
   end
+
+end
 
 
 

@@ -9,6 +9,11 @@
 
 
 
+ $btn-warning-bg: #AD14C9;
+ $btn-primary-border: darken($btn-success-bg, 20%);
+ $btn-success-border: darken($btn-success-bg, 20%);
+ $btn-warning-border: darken($btn-warning-bg, 5%);
+
 header {
 
     @extend .page-header;
