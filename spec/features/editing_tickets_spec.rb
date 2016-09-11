@@ -13,10 +13,10 @@ RSpec.feature "Users can edit existing tickets" do
 
 	scenario "with valid attributes" do
 
-		fill_in "Name", with: "Make it really shiny!"
+		fill_in "Name", with: "Make it really shiny frosh and very very sexy!"
 		click_button "Update Ticket"
 
-		expect(page).to have_content "Ticket has been updated."
+		expect(page).to have_content "Make it really shiny frosh and very very sexy!"
 
 		within("#ticket h2") do
 

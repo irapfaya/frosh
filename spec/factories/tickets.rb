@@ -1,7 +1,11 @@
 FactoryGirl.define do
+
   factory :ticket do
+
     name "MyString"
-    description "MyText"
+    description "Ticket has been deleted successfully."
     project nil
+
   end
+  
 end
