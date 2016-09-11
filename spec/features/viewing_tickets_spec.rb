@@ -34,4 +34,6 @@ RSpec.feature "Users can view tickets" do
 	expect(page).to have_content "Gradients! Starbursts! Oh my!"
 
 	end
+
+	#omo na comment tins
 end
