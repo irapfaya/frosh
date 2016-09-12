@@ -38,13 +38,6 @@
               <%= link_to "Home", root_path %>
 
            </li>
-           <li class="<%= "active" if current_page?("/users/sign_up") %>">
-             <%= link_to "Sign up", new_user_registration_path %>
-           </li>
-
-           <li class="<%= "active" if current_page?("/users/sign_in") %>">
-           <%= link_to "Sign in", new_user_session_path %>
-           </li>
 
            <% unless user_signed_in? %>
 
@@ -58,23 +51,7 @@
 
            <% end %>
 
-         </ul>
-
-         <% if user_signed_in? %>
-
-          <div class="navbar-right">
-
-             <p class="navbar-text">
-
-               Signed in as <%= current_user.email %>
-
-             </p>
-
-          </div>
-
-          <% end %>
-
-
+        </ul>
 
         <% if user_signed_in? %>
 
@@ -98,6 +75,8 @@
         </div>
 
         <% end %>
+
+         
 
       </div>
   </div>
