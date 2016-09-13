@@ -5,6 +5,7 @@
  @import "bootstrap/theme";
  @import "bootstrap";
  @import "font-awesome";
+
  
 
 
@@ -116,5 +117,32 @@ body {
 
   }
 
+
+}
+
+#attributes {
+
+@extend .table;
+@extend .table-condensed;
+width: 65%;
+th {
+width: 35%;
+
+}
+
+tr:first-child {
+
+td, th {
+
+border-top: 0px;
+}
+
+}
+
+td, th {
+
+line-height: 24px !important;
+
+}
 
 }

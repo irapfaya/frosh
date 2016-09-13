@@ -28,6 +28,12 @@ RSpec.feature "Users can create new tickets" do
 				expect(page).to have_content "Name can't be blank"
 				expect(page).to have_content "Description can't be blank"
 
+				within("#ticket") do
+
+                    expect(page).to have_content "Author: #{user.email}"
+
+                end
+
 			end
 
 			   scenario "with an invalid description" do

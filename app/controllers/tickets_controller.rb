@@ -17,6 +17,7 @@ end
 def create
 
    @ticket = @project.tickets.build(ticket_params)
+   @ticket.author = current_user
 
 		if @ticket.save
 
@@ -58,7 +59,7 @@ def destroy
 	@ticket.destroy
 	flash[:notice] = "Ticket has been deleted."
 	redirect_to @project
-	
+
 end
 
 
