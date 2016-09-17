@@ -7,9 +7,19 @@ Rails.application.routes.draw do
 
     resources :projects, only: [:new, :create, :destroy]
 
-    resources :users
+          resources :users do 
 
-  end
+            member do
+
+              patch :archive
+
+            end
+
+        end
+
+      end
+
+
 
   devise_for :users
   
@@ -20,5 +30,6 @@ Rails.application.routes.draw do
   resources :tickets
 
   end
+
+  end
   
-end
